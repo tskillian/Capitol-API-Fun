@@ -68,9 +68,6 @@ elif int(user_choice) == 2:
 			'OK', 'OR', 'PA', 'RI', 'SC', 'SD', 'TN', 'TX', 'UT',
 			'VT', 'VA', 'WA', 'WV', 'WI', 'WY']
 
-	text_to_print = """
-	The total sentiment score for %s's top 75 most used words is %i
-	""" 
 
 	states_dict = {}
 	for state in states:
