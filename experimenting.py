@@ -1,3 +1,8 @@
+#There are some holes in how I'm getting
+#to the total sentiment score (plus so many words used aren't in
+#the sentiment dictionary!), but it's a work in progress and
+#all just for good fun/learning!
+
 import requests
 import pprint
 
@@ -37,7 +42,7 @@ if int(user_choice) == 1:
 	sentiment_score = 0
 	for i in data:
 		if i['ngram'] in sentiment_dict:
-			sentiment_score += int(i['count']) * int(sentiment_dict[i['ngram']])
+			sentiment_score += int(sentiment_dict[i['ngram']])
 
 	text_to_print = """
 	The total sentiment score for %s's top 75 most used words is %i
@@ -75,7 +80,7 @@ elif int(user_choice) == 2:
 		data = response.json()
 		for i in data:
 			if i['ngram'] in sentiment_dict:
-				sentiment_score += int(i['count']) * int(sentiment_dict[i['ngram']])
+				sentiment_score += int(sentiment_dict[i['ngram']])
 		states_dict[state] = sentiment_score
 
 	pprint.pprint(states_dict)
