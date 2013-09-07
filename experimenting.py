@@ -5,6 +5,7 @@
 
 import requests
 import pprint
+api_key = 'Replace with your own API key! :)'
 
 #Print user Menu and ask user what they want to do
 print "What would you like to do?"
@@ -24,7 +25,7 @@ with open('AFINN-111.txt', 'r') as afinn:
 # Sentiment score by state
 if int(user_choice) == 1:
 	#General paramaters and API calling
-	query_params = { 'apikey': 'Replace with your own API key! :)',
+	query_params = { 'apikey': api_key,
 				 	'per_page': 75,
 				 	'sort': 'count desc',
 				 	'entity_type': 'state',
@@ -54,7 +55,7 @@ if int(user_choice) == 1:
 # List all states' sentiment scores
 elif int(user_choice) == 2:
 	#General paramaters and API calling
-	query_params = { 'apikey': '9aee1f7c1dbe4cda8066111b55935de8',
+	query_params = { 'apikey': api_key,
 				 	'sort': 'count desc',
 				 	'entity_type': 'state',
 				 	'entity_value': 'to_be_replaced'

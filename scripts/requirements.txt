@@ -1,5 +1,0 @@
-pyyaml
-scrapelib
-ipython
-lxml>=2.2
-cssselect
